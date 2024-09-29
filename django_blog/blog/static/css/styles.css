@@ -1,0 +1,32 @@
+.custom-container {
+    max-width: 1450px;
+}
+
+.form-div {
+    background-color: #F0F8FF;
+}
+
+.post-div {
+    max-width: 1350px;
+}
+
+.media-div {
+    border: 1px solid black;
+    padding: 23px;
+    margin-bottom: 10px;
+}
+
+.media-title {
+    text-align: left;
+    float: left;
+    color: #000000;
+}
+
+.media-date {
+    text-align: right;
+    float: right;
+}
+
+.line {
+    clear: both;
+}
