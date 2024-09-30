@@ -1,6 +1,10 @@
 {% extends 'blog/index.html' %}
 {%block content %}
 {% load static %}
+
+<!-- <link rel="stylesheet" href="../../static/css/styles.css"> -->
+
+
 <div class="container">
     <div class="row">
         <div class="col-md-6 offset-md-3">
@@ -10,7 +14,7 @@
                 <form class="card-body cardbody-color p-lg-5" method="post">
                     {% csrf_token %}
                     <div class="text-center">
-                        <h2>Blog Bridge</h2>
+                        <h2>Blog Bridge </h2>
                     </div>
 
                     <div class="mb-3">
@@ -35,3 +39,15 @@
     </div>
 </div>
 {% endblock %}
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello</h1>
+</body>
+</html> -->
