@@ -30,3 +30,7 @@
 .line {
     clear: both;
 }
+
+.new_post {
+    max-width: 1250px;
+}
