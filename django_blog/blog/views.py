@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from .models import Posts
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 from . import models
 # Create your views here.
 
@@ -34,13 +35,17 @@ def home(request):
     }
     return render(request, 'blog/home.html', context)
 
+
+@login_required
 def new_post(request):
     if request.method == "POST":
         title = request.POST.get('title')
         content = request.POST.get('content')
-        n_post = models.Posts(title = title, content = content)
+        n_post = Posts(title=title, content=content, author=request.user)
         n_post.save()
+
         return redirect('/')
+    
     return render(request, 'blog/new_post.html')
 
 def my_post(request):
