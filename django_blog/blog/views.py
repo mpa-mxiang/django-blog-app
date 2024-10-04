@@ -53,3 +53,7 @@ def my_post(request):
         'posts': Posts.objects.filter(author = request.user)
     }
     return render(request, 'blog/my_post.html', context)
+
+def signout(request):
+    logout(request)
+    return redirect('/login')
